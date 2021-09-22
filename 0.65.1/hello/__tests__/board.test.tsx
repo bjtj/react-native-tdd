@@ -6,7 +6,7 @@ test('form submits two answers', () => {
     const allQuestions = ['q1', 'q2'];
     const mockFn = jest.fn();
 
-    const { getAllByA11yLabel, etByText } = render(
+    const { getAllByA11yLabel, getByText } = render(
 	<QuestionsBoard questions={allQuestions} onSubmit={mockFn} />);
 
     const answerInputs = getAllByA11yLabel('answer input');
